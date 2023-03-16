@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(/imgs/background.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    font-family: "Inter";
+}
+
+h1{
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.cabecalho{
+    height: 85%;
+    width: 90%;
+    background-image: linear-gradient(rgba(255, 255,255), rgba(255, 255, 255));
+    margin: auto;
+    text-align: center;
+    font-weight: 200;
+    text-align: left;
+    padding: 1em 2em;
+    position: relative;
+    box-shadow: 1px 1px 3px black;
+}
+
+.inputBox{
+    margin-top: 1.5em;
+    position: relative;
+}
+
+.inputBox .inputField
+{
+    position: relative;
+    padding: 10px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 2;
+}
+
+.inputBox .span-field
+{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.inputBox .inputField:valid ~ .span-field,
+.inputBox .inputField:focus ~ .span-field
+{
+    font-size: 0.8em;
+    transform: translateY(-32px);
+}
+
+.i-input{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, rgb(18, 123, 250), rgb(225, 30, 255));
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.inputBox .inputField:valid ~ .i-input,
+.inputBox .inputField:focus ~ .i-input
+{
+    height: 100%;
+    box-shadow: inset 0 0 8px rgba(0,0,0,.2);
+}
